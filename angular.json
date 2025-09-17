@@ -91,6 +91,35 @@
           }
         }
       }
+    },
+    "sc-angular-toastify": {
+      "projectType": "library",
+      "root": "projects/sc-angular-toastify",
+      "sourceRoot": "projects/sc-angular-toastify/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sc-angular-toastify/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sc-angular-toastify/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/sc-angular-toastify/tsconfig.spec.json"
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "c21d2dc3-fd91-4624-87c9-15ae0ec40f01"
   }
 }

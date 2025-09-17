@@ -11,6 +11,11 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
+    "paths": {
+      "sc-angular-toastify": [
+        "./dist/sc-angular-toastify"
+      ]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve"
@@ -29,6 +34,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sc-angular-toastify/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sc-angular-toastify/tsconfig.spec.json"
     }
   ]
 }
