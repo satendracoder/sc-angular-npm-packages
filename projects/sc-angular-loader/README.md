@@ -1,63 +1,114 @@
-# ScAngularLoader
+# sc-angular-loader
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
+A collection of **customizable Angular loader components** (spinner, dots, bar, skeleton) for modern Angular applications.  
+Easily display loading states with stylish and reusable UI loaders.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Installation
 
 ```bash
-ng generate --help
+npm install sc-angular-loader
 ```
 
-## Building
+---
 
-To build the library, run:
+## 📦 Setup
+
+In your Angular project, import the loader components or module.
+
+### Option 1 – Import Components Individually
+
+```ts
+import { SpinnerLoaderComponent, DotsLoaderComponent } from 'sc-angular-loader';
+```
+
+### Option 2 – Import All via `LoaderModule`
+
+(Recommended for simplicity)
+
+```ts
+import { LoaderModule } from 'sc-angular-loader';
+
+@NgModule({
+  imports: [LoaderModule],
+})
+export class AppModule {}
+```
+
+---
+
+## 🎨 Usage Examples
+
+### Spinner Loader
+
+```html
+<sc-spinner-loader></sc-spinner-loader>
+```
+
+### Dots Loader
+
+```html
+<sc-dots-loader></sc-dots-loader>
+```
+
+### Bar Loader
+
+```html
+<sc-bar-loader></sc-bar-loader>
+```
+
+### Skeleton Loader
+
+```html
+<sc-skeleton-loader width="200px" height="20px"></sc-skeleton-loader>
+```
+
+---
+
+## ⚙️ Customization
+
+- **Skeleton Loader** supports custom width/height:
+
+  ```html
+  <sc-skeleton-loader width="150px" height="30px"></sc-skeleton-loader>
+  ```
+
+- **Global Styles**: You can override loader colors in your project’s CSS/SCSS:
+  ```scss
+  sc-spinner-loader .spinner {
+    border-top-color: #ff4081; // pink
+  }
+  ```
+
+---
+
+## 📚 Supported Loaders
+
+- 🔄 Spinner Loader
+- ⬤⬤⬤ Dots Loader
+- 📊 Bar Loader
+- 🦴 Skeleton Loader
+
+---
+
+## 🛠 Development
+
+To build the library locally:
 
 ```bash
-ng build sc-angular-loader
+ng build sc-angular-loader --configuration production
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
-
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/sc-angular-loader
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+To publish on npm:
 
 ```bash
-ng test
+cd dist/sc-angular-loader
+npm publish
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 📖 License
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+MIT © [Satendra Rajput](https://satendracoder.com)
