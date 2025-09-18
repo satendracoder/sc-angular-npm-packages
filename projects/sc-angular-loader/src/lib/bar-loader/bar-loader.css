@@ -1,0 +1,23 @@
+.bar {
+  width: 100px;
+  height: 6px;
+  background: #ddd;
+  position: relative;
+  overflow: hidden;
+}
+.bar::before {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: #3f51b5;
+  animation: slide 1s infinite;
+}
+@keyframes slide {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 100%;
+  }
+}

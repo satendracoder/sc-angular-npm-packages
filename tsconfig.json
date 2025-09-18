@@ -12,6 +12,9 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "paths": {
+      "sc-angular-loader": [
+        "./dist/sc-angular-loader"
+      ],
       "sc-angular-toastify": [
         "./dist/sc-angular-toastify"
       ]
@@ -40,6 +43,12 @@
     },
     {
       "path": "./projects/sc-angular-toastify/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sc-angular-loader/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sc-angular-loader/tsconfig.spec.json"
     }
   ]
 }
