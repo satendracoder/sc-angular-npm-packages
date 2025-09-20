@@ -1,9 +1,13 @@
 {
   "name": "sc-angular-toastify",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Angular standalone toast notification library",
   "author": "Satendra Rajput",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satendracoder/sc-angular-npm-packages/tree/master/projects"
+  },
   "keywords": [
     "angular",
     "toast",

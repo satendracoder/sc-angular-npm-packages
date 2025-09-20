@@ -33,6 +33,7 @@
     "@angular/ssr": "^20.3.1",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
+    "sc-angular-toastify": "file:dist/sc-angular-toastify",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
