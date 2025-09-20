@@ -100,22 +100,6 @@ this.toast.show(
 );
 ```
 
----
-
-## 👤 Author
-
-**Satendra Rajput**
-
-Website: [https://satendracoder.com](https://satendracoder.com)
-
-LinkedIn: [https://linkedin.com/in/satendracoder](https://linkedin.com/in/satendracoder)
-
-Instagram: [https://instagram.com/satendracoder](https://instagram.com/satendracoder)
-
-YouTube: [https://youtube.com/@satendracoder](https://youtube.com/@satendracoder)
-
----
-
 ## 🤝 Contributing
 
 Pull requests are welcome. For major changes, please open an issue first.
