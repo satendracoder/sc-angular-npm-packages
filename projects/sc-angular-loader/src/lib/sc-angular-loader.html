@@ -1,0 +1,54 @@
+@if (loaderService.loading()) {
+<div class="loader-overlay" [ngStyle]="{ 'background-color': background }">
+    @switch (type) {
+    @case ('spinner') {
+    <div [ngClass]="class"
+        [ngStyle]="{ 'border-top-color': color, width: width, height: height,'--spinner-color': color }"></div>
+    }
+    @case ('dots') {
+    <div [ngClass]="class">
+        @if (class==='dots') {
+        <div [ngStyle]="{ background: color,'--spinner-color': color }"></div>
+        <div [ngStyle]="{ background: color,'--spinner-color': color }"></div>
+        <div [ngStyle]="{ background: color,'--spinner-color': color }"></div>
+        <div [ngStyle]="{ background: color,'--spinner-color': color }"></div>
+        } @else {
+        <div [ngClass]="class" [style.--spinner-color]="color" [ngStyle]="{'--spinner-color': color}"></div>
+        }
+    </div>
+    }
+    @case ('bar') {
+    <div class="bar" [ngClass]="class" [style.--spinner-color]="color"
+        [ngStyle]="{ 'background-color': bgBar, '--spinner-color': color }"></div>
+    }
+    @case ('skeleton') {
+    <div class="skeleton" [ngStyle]="{ width: width, height: height, 'background-color': color }"></div>
+    }
+    @case ('classic') {
+    <div [ngClass]="class" [style.--nameIs]="'&quot;' + name + '&quot;'" [ngStyle]="{ '--background-color': color }">
+    </div>
+    }
+    @default {
+    <div [ngClass]="class"
+        [ngStyle]="{ 'border-top-color': color, width: width, height: height,'--spinner-color': color }"></div>
+    }
+    }
+    <!-- <div [ngSwitch]="type">
+        <div *ngSwitchCase="'spinner'" [ngClass]="class"
+            [ngStyle]="{ 'border-top-color': color, width: width, height: height,'--spinner-color': color }"></div>
+
+
+        <div *ngSwitchCase="'dots'" class="dots">
+            <div [ngStyle]="{ background: color }"></div>
+            <div [ngStyle]="{ background: color }"></div>
+            <div [ngStyle]="{ background: color }"></div>
+        </div>
+
+        <div *ngSwitchCase="'bar'" class="bar" [ngStyle]="{ 'background-color': bgBar }"></div>
+
+        <div *ngSwitchCase="'skeleton'" class="skeleton"
+            [ngStyle]="{ width: width, height: height, 'background-color': color }"></div>
+        <div *ngSwitchDefault class="spinner" [ngStyle]="{ 'border-top-color': color }"></div>
+    </div> -->
+</div>
+}
